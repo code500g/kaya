@@ -690,10 +690,15 @@
   .tag {
     color: var(--deep-blue);
     margin-bottom: 12px;
-    display: inline-block;
-    opacity: 0.5;
+    display: flex;
+    align-items: center;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 18px;
+    line-height: 1.2;
+    gap: 4px;
+    svg{
+      vertical-align: middle;
+    }
   }
 }
 
@@ -714,19 +719,21 @@
 
 .case-card li {
   margin-bottom: 8px;
-  padding-left: 12px;
   position: relative;
   line-height: 1.6;
   font-size: 18px;
   color: var(--deep-blue);
+  display: flex;
+  align-items: center;
+  gap: 8px
 }
 
-.case-card li::before {
-  content: '-';
-  position: absolute;
-  left: 0;
-  color: var(--deep-blue);
-}
+// .case-card li::before {
+//   content: '-';
+//   position: absolute;
+//   left: 0;
+//   color: var(--deep-blue);
+// }
 
 .insights-head {
   display: flex;

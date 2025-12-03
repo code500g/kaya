@@ -139,7 +139,13 @@ const Home = () => {
       desc: "FBA 入仓、退货处理、库存管理、虚拟仓等增值服务",
     },
   ];
-
+  const advantageNumber = [
+    { title: "2009年", desc: "成立时间" },
+    { title: "5亿", desc: "每年人民币出口额" },
+    { title: "2000+", desc: "服务出口企业客户" },
+    { title: "16", desc: "海外仓+国内仓" },
+    { title: "100", desc: "义乌百强进出口企业" },
+  ];
   const services = [
     {
       id: "warehouse",
@@ -443,6 +449,14 @@ const Home = () => {
                   <div className="adv-lottie" ref={lottieBoxRef}></div>
                 </div>
               </div>
+            </div>
+            <div className="advantage-points">
+              {advantageNumber.map((point) => (
+                <div className="advantage-point" key={point.title}>
+                  <div className="title">{point.title}</div>
+                  <div className="desc">{point.desc}</div>
+                </div>
+              ))}
             </div>
           </section>
 

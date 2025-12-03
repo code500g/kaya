@@ -480,6 +480,37 @@
   color: #4b5563;
   line-height: 1.5;
 }
+
+.advantage-points {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  background: #253c54;
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+}
+
+.advantage-point {
+  background: var(--deep-blue);
+  padding: 32px;
+  font-weight: 600;
+  color: var(--text--primary);
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .title {
+    font-size: 56px;
+    line-height: 1;
+  }
+  .desc {
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 500;
+    color: var(--text--secondary);
+  }
+}
+
 .services-section {
   padding: 64px 0;
   background: var(--bg--primary);

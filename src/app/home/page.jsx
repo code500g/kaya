@@ -374,7 +374,7 @@ const Home = () => {
             <div className="hero-content">
               <div className="hero-title">
                 <span className="pill pill-blue">
-                  海外仓 + 跨境物流 一站式服务
+                  为贸易全球化提供持续创新的服务
                 </span>
                 <h1>一站式跨境供应链服务商</h1>
                 <div className="hero-subtitle">

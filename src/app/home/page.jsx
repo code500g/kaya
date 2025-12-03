@@ -260,6 +260,14 @@ const Home = () => {
 
   const activeCase = caseStudies[caseIndex];
 
+  const handleLoginClick = () => {
+    window.open(
+      "https://kaya-admin-il39qjkqd-yangxiaohu65gmailcoms-projects.vercel.app/",
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
+
   return (
     <>
       {homePageContentLoaded && homePageContent !== "" ? (
@@ -292,7 +300,9 @@ const Home = () => {
                 ))}
               </nav>
               <div className="header-actions">
-                <button className="outline-btn">中 / EN</button>
+                <button className="outline-btn" onClick={handleLoginClick}>
+                  登录
+                </button>
                 <button className="outline-btn">7x24 在线客服</button>
               </div>
             </header>
@@ -308,8 +318,8 @@ const Home = () => {
                 </div>
               </div>
               <div className="hero-actions">
-                <button className="primary-btn">一键发展您的业务</button>
-                <button className="primary-btn arrow-btn" aria-label="更多行动">
+                <button className="primary-btn" onClick={handleLoginClick}>一键发展您的业务</button>
+                <button className="primary-btn arrow-btn" onClick={handleLoginClick}>
                   <HeroArrowRight
                     className="h-5 w-5 text-white"
                     aria-hidden="true"
@@ -500,7 +510,7 @@ const Home = () => {
                 <div className="footer-qrcode">
                   <div className="footer-title">关注我们</div>
                   <div className="qr-placeholder">二维码</div>
-                  <p>扫码关注开亚KAYA</p>
+                  <p className="footer-logo-text">扫码关注开亚KAYA</p>
                 </div>
               </div>
               <div className="footer-lower">

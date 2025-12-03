@@ -27,14 +27,13 @@ import brand10 from "./img/brands/brand10.avif";
 const HeroArrowRight = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className="stroke-1"
     viewBox="0 0 24 24"
     fill="currentColor"
-    {...props}
+    className="size-6"
   >
     <path
       fillRule="evenodd"
-      d="M12.97 4.97a.75.75 0 0 1 1.06 0l7 7a.75.75 0 0 1 0 1.06l-7 7a.75.75 0 1 1-1.06-1.06L18.94 13H4.75a.75.75 0 0 1 0-1.5h14.19l-6.97-6.97a.75.75 0 0 1 0-1.06Z"
+      d="M12.97 3.97a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06l6.22-6.22H3a.75.75 0 0 1 0-1.5h16.19l-6.22-6.22a.75.75 0 0 1 0-1.06Z"
       clipRule="evenodd"
     />
   </svg>
@@ -318,12 +317,14 @@ const Home = () => {
                 </div>
               </div>
               <div className="hero-actions">
-                <button className="primary-btn" onClick={handleLoginClick}>一键发展您的业务</button>
-                <button className="primary-btn arrow-btn" onClick={handleLoginClick}>
-                  <HeroArrowRight
-                    className="h-5 w-5 text-white"
-                    aria-hidden="true"
-                  />
+                <button className="primary-btn" onClick={handleLoginClick}>
+                  一键发展您的业务
+                </button>
+                <button
+                  className="primary-btn arrow-btn"
+                  onClick={handleLoginClick}
+                >
+                  <HeroArrowRight />
                 </button>
               </div>
             </div>

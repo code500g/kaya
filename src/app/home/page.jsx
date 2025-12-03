@@ -262,7 +262,7 @@ const Home = () => {
 
   const handleLoginClick = () => {
     window.open(
-      "https://kaya-admin-il39qjkqd-yangxiaohu65gmailcoms-projects.vercel.app/",
+      "https://kaya-admin-beta.vercel.app/",
       "_blank",
       "noopener,noreferrer"
     );

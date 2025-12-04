@@ -11,6 +11,9 @@ import animation4 from "./animation4.json";
 import LOGO from "./img/logo-memo.svg";
 import img01 from "./img/img01.jpg";
 import img02 from "./img/img02.avif";
+import img03 from "./img/img07.avif";
+import img05 from "./img/img05.avif";
+import img06 from "./img/img06.avif";
 import arrowRight from "./img/MaterialSymbolsLightArrowForward.svg";
 import arrowLeft from "./img/MaterialSymbolsLightArrowBackRounded.svg";
 import brand01 from "./img/brands/brand01.png";
@@ -104,7 +107,7 @@ const Home = () => {
   const navItems = [
     { label: "首页", href: "#", active: true },
     { label: "为什么选择开亚", href: "#advantages" },
-    { label: "服务及解决方案", href: "#services" },
+    { label: "服务及解决方案", href: "#business" },
     { label: "合作伙伴", href: "#partners" },
     { label: "客户案例", href: "#cases" },
     { label: "关于我们", href: "#about" },
@@ -216,6 +219,60 @@ const Home = () => {
       ],
       icon: <Camera />,
       color: "#1677ff",
+    },
+  ];
+
+  const businessItems = [
+    {
+      id: "business-1",
+      variant: "title",
+      title: "主营业务",
+      subtitle: `全场景高效服务，`,
+      subtitle2: `满足多元化需求。`,
+      span: 2,
+      className: "business-first",
+    },
+    {
+      id: "business-2",
+      variant: "feature",
+      title: "国际货运代理业务",
+      desc: "致力开发COSCO、美森、ZIM、EXX等不同船公司的优势资源，为出口到全球的货物提供服务，为门到门的航线做资源准备。",
+      bg: img05,
+    },
+    {
+      id: "business-3",
+      variant: "brand",
+      title: "KAYA",
+      img: true,
+      className: "business-third",
+    },
+    {
+      id: "business-4",
+      variant: "feature",
+      title: "外贸综合服务",
+      desc: "为工厂和众多小型跨境电商出口企业，提供退税，工厂风控和审核等一系列的服务。",
+      bg: img03,
+    },
+    {
+      id: "business-5",
+      variant: "feature",
+      title: "海外仓服务",
+      desc: "20000平方的仓储和转运能力：码头拖车；仓库拆柜以及转运业务；仓储业务；一件代发；亚马逊退货处理",
+      bg: img01,
+    },
+    {
+      id: "business-6",
+      variant: "feature",
+      title: "跨境物流服务",
+      desc: "专注于美国线，提供快递，空派，海派，卡车派送等门到门的物流服务，多种渠道灵活组合。",
+      bg: img02,
+    },
+    {
+      id: "business-7",
+      variant: "feature",
+      title: "财税业务",
+      desc: "跨境电商企业合规服务；代理记账，代理注册等；海外公司注册，税务知识咨询。",
+      bg: img06,
     },
   ];
 
@@ -460,7 +517,45 @@ const Home = () => {
             </div>
           </section>
 
-          <section className="services-section" id="services">
+          <section className="business-section" id="business">
+            <div className="business-grid">
+              {businessItems.map((item) => (
+                <div
+                  key={item.id}
+                  className={`business-item ${item.span === 2 ? "wide" : ""} ${
+                    item.bg ? "has-bg" : ""
+                  } ${item.variant ? `variant-${item.variant}` : ""} ${
+                    item.className || ""
+                  }`}
+                  style={{
+                    ...(item.bg
+                      ? { backgroundImage: `url(${item.bg.src})` }
+                      : {}),
+                  }}
+                >
+                  {item.variant === "title" ? (
+                    <div className="biz-title-block">
+                      <div className="biz-eyebrow">{item.title}</div>
+                      <div className="biz-subtitle">
+                        <div>{item.subtitle}</div>
+                        <div>{item.subtitle2}</div>
+                      </div>
+                    </div>
+                  ) : item.variant === "brand" ? (
+                    <div className="biz-logo"></div>
+                  ) : (
+                    <>
+                      {/* {item.icon && <div className="biz-icon">{item.icon}</div>} */}
+                      <div className="biz-title">{item.title}</div>
+                      {item.desc && <p className="biz-desc">{item.desc}</p>}
+                      <div className="card-scrim"></div>
+                    </>
+                  )}
+                </div>
+              ))}
+            </div>
+          </section>
+          {/* <section className="services-section" id="services">
             <div className="services-section-main">
               <div className="section-head">
                 <div className="head-sub"></div>
@@ -501,7 +596,7 @@ const Home = () => {
                 ))}
               </div>
             </div>
-          </section>
+          </section> */}
 
           <section className="cases-section" id="cases">
             <div className="cases-body">
